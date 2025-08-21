@@ -1,0 +1,30 @@
+# config.yaml - example for the batch_manager
+command_template: "python run_analysis.py {input} --out {output} --cut {param_cut} --max-events {param_max_events}"
+base_output_dir: "results"
+parallel_jobs: 4
+retry_failed: 2
+retry_backoff_seconds: 2
+per_job_timeout_seconds: 3600   # optional; set to None to disable
+
+parameters:
+  cut: 20
+  max_events: 100000
+
+datasets:
+  - path: "data/sampleA.root"
+    name: "sampleA"
+    parameters:
+      cut: 10          # overrides global 'cut' for this dataset
+  - path: "data/sampleB.root"
+    name: "sampleB"
+
+# aggregation options
+auto_aggregate: true
+aggregation_output_dir: "aggregated"
+aggregation_csv_pattern: "*_out.csv"
+aggregate_root: false   # set true if you want to try ROOT merging (needs uproot)
+aggregation_root_pattern: "*.root"
+
+# state & reports
+state_file: "state.json"
+final_report: "run_report.md"

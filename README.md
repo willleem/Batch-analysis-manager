@@ -1,8 +1,8 @@
 # Batch Analysis Manager
 
-A lightweight, experiment-agnostic batch job runner for particle physics and other data-heavy workflows.
+A lightweight, experiment-agnostic batch job runner for particle physics and other data-heavy workflows.  
 
-This tool automates running the same analysis script across many datasets, handles retries, logs output, and can merge results — without needing heavy clu$
+This tool automates running the same analysis script across many datasets, handles retries, logs output, and can merge results — without needing heavy cluster software like HTCondor or SLURM.
 
 ---
 
@@ -57,11 +57,9 @@ python batch_manager.py --config config.yaml
 ## Example Project Structure
 batch-analysis-manager/
 ├── batch_manager.py
-├── samrequirements.txt
-├── config.yaml 
+├── requirements.txt
+├── config.yaml
 ├── run_analysis.py
 └── data/
     ├── sampleA.root
     └── sampleB.root
-
-

@@ -1,0 +1,18 @@
+{
+  "0001_sampleB": {
+    "job_id": "0001_sampleB",
+    "status": "success",
+    "attempts": 1,
+    "log": "results/sampleB/0001_sampleB.log",
+    "returncode": 0,
+    "output_dir": "results/sampleB"
+  },
+  "0000_sampleA": {
+    "job_id": "0000_sampleA",
+    "status": "success",
+    "attempts": 1,
+    "log": "results/sampleA/0000_sampleA.log",
+    "returncode": 0,
+    "output_dir": "results/sampleA"
+  }
+}
